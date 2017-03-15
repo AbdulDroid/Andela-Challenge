@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/developers_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.andelachallenge.developerprofiles.Profiles">
+    tools:context="com.andelachallenge.developerprofiles.activity.ProfilesActivity">
 
     <ImageView
         android:id="@+id/profile_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/username"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="8dp"/>
-
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/user_profile_photo"
+        android:layout_margin="16dp"/>
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/profile_image"
         android:layout_centerInParent="true"
-        android:layout_margin="8dp"/>
+        android:textStyle="bold|italic"
+        android:textSize="18dp"/>
 
     <TextView
         android:id="@+id/github_url"
@@ -29,17 +30,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
         android:layout_centerInParent="true"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:textStyle="italic"
+        android:textSize="18dp"/>
 
     <Button
         android:id="@+id/share_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@id/github_url"
         android:layout_centerHorizontal="true"
-        android:text="share"
+        android:text="@string/share"
         android:textAllCaps="true"/>
-
 
 </RelativeLayout>
